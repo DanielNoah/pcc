@@ -1,7 +1,11 @@
-filename = 'pi_digits.txt'
+filepath = 'chapter_10/text_file/pi_digits.txt'
 
-with open(filename) as file_object:
-    lines = file_object.readlines()
+with open(filepath) as file_object:
+    lines = file_object.readlines()    
 
+pi_string = ''
 for line in lines:
-    print(line.rstrip())
+    pi_string += line.strip()
+
+print(pi_string[:52] + "...")
+print(len(pi_string))
